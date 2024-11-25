@@ -1,0 +1,60 @@
+/* class for the font */
+.pacifico {
+    font-family: "Pacifico", cursive;
+  }
+.pt-sans-bold {
+    font-family: "PT Sans Caption", sans-serif;
+    font-weight: 700;
+}
+/* edit the body */
+body{
+    background-color: rgb(247, 236, 222);
+}
+.c-h1{
+    font-size: 52px;
+}
+/* before fr the h1 */
+h1::before{
+    position: absolute;
+    text-align: start;
+    background-color: rgb(254, 194, 96);
+    content: " ";
+    bottom: 0;
+    height: 10px;
+    width: 100%;
+    z-index: -1;
+    transition: all 1s;
+}
+/* hover for the h1 */
+h1:hover::before{
+    transform: scaleY(10);
+}
+/* middle part */
+.c-bor{
+    border-top: 2px dotted black ;
+    border-bottom: 2px dotted black;
+}
+.c-fs{
+    font-size: 20px;
+}
+.c-butt{
+    border: 2px rgb(209, 81, 45) solid;
+    background-color: rgb(209, 81, 45);
+    color: white;
+}
+.c-butt:hover{
+    background-color: rgb(200, 72, 36);
+    color: white;
+    border: 2px rgb(200, 72, 36) solid;
+}
+/* gradient font color */
+.c-fgrad{
+    background: linear-gradient(to right, #ff3300, #ffc79d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* }slection color */
+::selection{
+    color: white;
+    background-color:rgb(254, 194, 96) ;
+}

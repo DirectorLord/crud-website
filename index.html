@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- first font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- FA -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- local -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+</head>
+<body>
+    <!-- all div -->
+    <div class="container my-5 d-flex flex-column justify-content-around align-items-center">
+        <!-- title -->
+        <div class="text-canter my-3">
+            <h1 class="pacifico position-relative overflow-hidden c-h1">Bookmarker</h1>
+        </div>
+        <!-- middle part -->
+        <div class="my-5 c-bor w-100">
+            <!-- title -->
+            <div class="text-center p-3">
+                <h2 class="mb-5 c-fgrad"><span><i class="fa-solid fa-bookmark"></i></span>
+                    Bookmark your favourite sites
+                    <span><i class="fa-solid fa-bookmark"></i></span>
+                </h2>
+                <!--Site name -->
+                <p class="c-fs fw-bolder pt-sans-bold text-start"><span><i class="fa-solid fa-book-bookmark me-2 c-fs"></i></span> Site Name</p>
+                <!-- label -->
+                <div class="form-floating mb-3">
+                    <input type="text" oninput="validInput(this)" class="form-control" id="bookname" placeholder="name@example.com">
+                    <div class="alert alert-danger mt-2 p-0 d-none">
+                        site name must start with the name and / or ends with a number
+                    </div>
+                    <label for="bookname">Bookmark Name</label>
+                </div>
+                <!-- Site URL -->
+                <p class="c-fs fw-bolder pt-sans-bold text-start"><span><i class="fa-solid fa-link me-2 c-fs"></i></span> Site URL</p>
+                <!-- label -->
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control w-100" id="weburl" oninput="validInput(this)" placeholder="name@example.com">
+                    <div class="alert alert-danger mt-2 p-0 d-none">
+                        site url must start with https:// and ends with .com
+                    </div>
+                    <label for="weburl">Website URL</label>
+                </div>
+                <button class=" btn mt- w-25 c-butt" onclick="addWeb()">Submit</button>
+            </div>
+        </div>
+        <!-- bottom part -->
+        <div class="w-100 bg-white">
+            <div class="row text-center">
+                <div class="col-3">
+                        <p class="pt-sans-bold">Index </p>
+                </div>
+                <div class="col-3">
+                        <p class="pt-sans-bold">Website Name</p>
+                </div>
+                <div class="col-3">
+                        <p class="pt-sans-bold">Visit</p>
+                </div>
+                <div class="col-3">
+                        <p class="pt-sans-bold">Delete</p>
+                </div>
+            </div>
+        </div>
+        <!-- the websites part -->
+        <div class="container bg-white border border-2 border-light">
+            <div class="row text-center" id="view">
+                
+            </div>
+        </div>
+    </div>
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
